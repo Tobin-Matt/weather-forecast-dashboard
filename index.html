@@ -32,11 +32,11 @@
             <div id="history-list" class="list-group">
                 <!-- a tags below will be dynamically added in js using a for loop tied to the users search input -->
                 <!-- when the user selects an a tag, function will run to fetch the API with a search query that matches user selection -->
-                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">The current link item</a>
-                <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                <button class="list-group-item m-2 btn btn-secondary">Searched City</button>
+                <button class="list-group-item m-2 btn btn-secondary">Searched City</button>
+                <!-- <a href="#" class="list-group-item list-group-item-action">A second link item</a>
                 <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-                <a href="#" class="list-group-item list-group-item-action">A fifth link item</a>
+                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a> -->
             </div>
           </div>
           <div class="col-sm-9">
@@ -50,9 +50,9 @@
                         <h4 id="current-date" class="p-2"></h4>
                         <img id="current-day-icon"></img>
                       </div>
-                      <p id="current-temp" class="text-sm-left"></p>
-                      <p id="current-wind" class="text-sm-left"></p>
-                      <p id="current-humidity" class="text-sm-left"></p>
+                      <p id="current-temp" class="text-start"></p>
+                      <p id="current-wind" class="text-start"></p>
+                      <p id="current-humidity" class="text-start"></p>
                     </div>
                   </div>
               </div>
@@ -60,45 +60,60 @@
 
             <div id="next-5-days" class="row">
               <div class="col-12">
-                <h5 class="mt-4">5-Day Forecast:</h5>
+                <h5 class="mt-4 text-start">5-Day Forecast:</h5>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 id="forecast-date" class="card-title text-start"></h5>
+                            <img id="forecast-icon-1" class="float-start"></img>
+                            <p id="forecast-temp-1" class="card-text text-start"></p>
+                            <p id="forecast-wind-1" class="card-text text-start"></p>
+                            <p id="forecast-humidity-1" class="card-text text-start"></p>
                           </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 id="forecast-date" class="card-title text-start"></h5>
+                            <img id="forecast-icon-2" class="float-start"></img>
+                            <p id="forecast-temp-2" class="card-text text-start"></p>
+                            <p id="forecast-wind-2" class="card-text text-start"></p>
+                            <p id="forecast-humidity-2" class="card-text text-start"></p>
                           </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 id="forecast-date" class="card-title text-start"></h5>
+                            <img id="forecast-icon-3" class="float-start"></img>
+                            <p id="forecast-temp-3" class="card-text text-start"></p>
+                            <p id="forecast-wind-3" class="card-text text-start"></p>
+                            <p id="forecast-humidity-3" class="card-text text-start"></p>
                           </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 id="forecast-date" class="card-title text-start"></h5>
+                            <img id="forecast-icon-4" class="float-start"></img>
+                            <p id="forecast-temp-4" class="card-text text-start"></p>
+                            <p id="forecast-wind-4" class="card-text text-start"></p>
+                            <p id="forecast-humidity-4" class="card-text text-start"></p>
                           </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <h5 id="forecast-date" class="card-title text-start"></h5>
+                            <img id="forecast-icon-5" class="float-start"></img>
+                            <p id="forecast-temp-5" class="card-text text-start"></p>
+                            <p id="forecast-wind-5" class="card-text text-start"></p>
+                            <p id="forecast-humidity-5" class="card-text text-start"></p>
                           </div>
                         </div>
                     </div>
