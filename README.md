@@ -17,5 +17,5 @@ To build this application a HTML file, and JavaScript file was created. A CSS fi
 ![](./Assets/Images/Untitled_%20Nov%2021%2C%202022%2010_17%20PM.gif)
 
 ## Project URLs
-* Deployed site URL:
-* GitHub Repo URL: 
+* Deployed site URL: https://tobin-matt.github.io/weather-forecast-dashboard/
+* GitHub Repo URL: https://github.com/Tobin-Matt/weather-forecast-dashboard

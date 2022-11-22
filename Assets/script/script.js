@@ -14,7 +14,7 @@ var forecastDates = document.querySelectorAll('#forecast-date');
 var fetchLatLon = function (event) {
     var searchEl = document.querySelector('#weather-search');
     var userSearch = searchEl.value;
-    var cityLink = 'http://api.openweathermap.org/geo/1.0/direct';
+    var cityLink = 'https://api.openweathermap.org/geo/1.0/direct';
     cityLink = cityLink + '?q=' + userSearch + '&limit=1&appid=' + apiKey
     console.log(cityLink);
 
@@ -32,7 +32,7 @@ var fetchLatLon = function (event) {
 
 //This fetch function will use the lat and lon from the fetchLatLon function and get the current days weather conditions using the current weather api call
 var fetchCurrentForecast = function (lat, lon) {
-    var forecastLink = 'http://api.openweathermap.org/data/2.5/weather'; 
+    var forecastLink = 'https://api.openweathermap.org/data/2.5/weather'; 
     forecastLink = forecastLink + '?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
     console.log(forecastLink); 
 
@@ -47,7 +47,7 @@ var fetchCurrentForecast = function (lat, lon) {
         currentDate.textContent = today;
         console.log(currentDate);
         var iconCode = response.weather[0].icon;
-        var weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png'
+        var weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png'
         document.querySelector('img').src = weatherIconUrl;
         currentTemp.textContent = 'Temperature: ' + response.main.temp + ' °F'
         currentWind.textContent = 'Wind Speed: ' + response.wind.speed + ' MPH'
@@ -57,7 +57,7 @@ var fetchCurrentForecast = function (lat, lon) {
 
 //This fetch function will use the lat and lon from the fetchLatLon function and get the next five days weather conditions using the 5 day 3 hour api call
 var fetchForecast = function (lat, lon) {
-    var forecastLink = 'http://api.openweathermap.org/data/2.5/forecast'; 
+    var forecastLink = 'https://api.openweathermap.org/data/2.5/forecast'; 
     forecastLink = forecastLink + '?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
     console.log(forecastLink);
 
@@ -75,19 +75,19 @@ var fetchForecast = function (lat, lon) {
         }
         //Add weather icon to 5 day forecast cards, the 3 lines of comments below will print the correct icon to the first forecast card but not all.
         var iconCode = response.list[4].weather[0].icon;
-        var weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
+        var weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-1').src = weatherIconUrl;
         iconCode = response.list[12].weather[0].icon;
-        weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
+        weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-2').src = weatherIconUrl;
         iconCode = response.list[20].weather[0].icon;
-        weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
+        weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-3').src = weatherIconUrl;
         iconCode = response.list[28].weather[0].icon;
-        weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
+        weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-4').src = weatherIconUrl;
         iconCode = response.list[36].weather[0].icon;
-        weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
+        weatherIconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-5').src = weatherIconUrl;
 
         
