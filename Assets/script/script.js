@@ -1,3 +1,4 @@
+//Global variables 
 var apiKey = 'd894dc28106fb0afb7dba285f293ba3b';
 var searchBtn = document.querySelector('#search-button');
 var cityName = document.querySelector('#city-name-current');
@@ -6,10 +7,10 @@ var currentTemp = document.querySelector('#current-temp');
 var currentWind = document.querySelector('#current-wind');
 var currentHumidity = document.querySelector('#current-humidity');
 
-// 5 Days forecasted variables.
+// 5 Days forecasted variable
 var forecastDates = document.querySelectorAll('#forecast-date');
 
-
+//This function uses the api call that gives the latitude and longitude based on a city name
 var fetchLatLon = function (event) {
     var searchEl = document.querySelector('#weather-search');
     var userSearch = searchEl.value;
@@ -29,6 +30,7 @@ var fetchLatLon = function (event) {
     })   
 }
 
+//This fetch function will use the lat and lon from the fetchLatLon function and get the current days weather conditions using the current weather api call
 var fetchCurrentForecast = function (lat, lon) {
     var forecastLink = 'http://api.openweathermap.org/data/2.5/weather'; 
     forecastLink = forecastLink + '?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
@@ -53,6 +55,7 @@ var fetchCurrentForecast = function (lat, lon) {
     })
 }
 
+//This fetch function will use the lat and lon from the fetchLatLon function and get the next five days weather conditions using the 5 day 3 hour api call
 var fetchForecast = function (lat, lon) {
     var forecastLink = 'http://api.openweathermap.org/data/2.5/forecast'; 
     forecastLink = forecastLink + '?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&units=imperial';
@@ -87,14 +90,8 @@ var fetchForecast = function (lat, lon) {
         weatherIconUrl = 'http://openweathermap.org/img/wn/' + iconCode + '.png';
         document.querySelector('#forecast-icon-5').src = weatherIconUrl;
 
-        // var forecastCards = [1, 2, 3, 4, 5];
-
-        // for (var i = 0; i < forecastCards.length; i++) {
-        //     var forecastTemp = document.querySelectorAll('#forecast-temp-' + forecastCards[i]);
-        //     console.log(forecastTemp);
-        //     forecastTemp[0].innerHMTL = response.list[4].main.temp;
-        // }
-
+        
+        //Functions below will add the needed weather conditions to the five days forecast cards.
         var forecastTemp = document.querySelectorAll('#forecast-temp-1');
         forecastTemp[0].innerHTML = 'Temp: ' + response.list[4].main.temp + ' °F';
         var forecastWind = document.querySelectorAll('#forecast-wind-1');
@@ -136,7 +133,6 @@ var searchListContainer = document.querySelector('#history-list');
 
 function createHistoryList () {
     var searchCity = document.querySelector('#weather-search');
-    // var searchListContainer = document.querySelector('#history-list');
     console.log(searchCity);
     var searchItem = document.createElement("button");
     searchItem.setAttribute('class', 'list-group-item m-2 btn btn-secondary');
@@ -146,9 +142,6 @@ function createHistoryList () {
     localStorage.setItem('city', JSON.stringify(searchItem.textContent));
     var searchHistoryItem = JSON.parse(localStorage.getItem('city'));
     console.log(searchHistoryItem);
-    // searchItem.addEventListener('click', function () {
-    //     fetchLatLon();
-    // })
 } 
 
 searchBtn.addEventListener('click', function () {
@@ -162,6 +155,3 @@ searchListContainer.addEventListener('click', function (event) {
     searchEl.value = event.target.textContent;
     fetchLatLon();
 })
-
-// searchBtn.addEventListener('click', fetchLatLon)
-// createHistoryList();
