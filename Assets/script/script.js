@@ -132,9 +132,11 @@ var fetchForecast = function (lat, lon) {
     })
 }
 
+var searchListContainer = document.querySelector('#history-list');
+
 function createHistoryList () {
     var searchCity = document.querySelector('#weather-search');
-    var searchListContainer = document.querySelector('#history-list');
+    // var searchListContainer = document.querySelector('#history-list');
     console.log(searchCity);
     var searchItem = document.createElement("button");
     searchItem.setAttribute('class', 'list-group-item m-2 btn btn-secondary');
@@ -144,14 +146,21 @@ function createHistoryList () {
     localStorage.setItem('city', JSON.stringify(searchItem.textContent));
     var searchHistoryItem = JSON.parse(localStorage.getItem('city'));
     console.log(searchHistoryItem);
-    searchItem.addEventListener('click', function () {
-        fetchLatLon();
-    })
+    // searchItem.addEventListener('click', function () {
+    //     fetchLatLon();
+    // })
 } 
 
 searchBtn.addEventListener('click', function () {
     fetchLatLon();
     createHistoryList();
+})
+
+searchListContainer.addEventListener('click', function (event) {
+    console.log(event.target.textContent);
+    var searchEl = document.querySelector('#weather-search');
+    searchEl.value = event.target.textContent;
+    fetchLatLon();
 })
 
 // searchBtn.addEventListener('click', fetchLatLon)

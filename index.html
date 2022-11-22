@@ -18,7 +18,7 @@
 </head>
 <body>
     <header class="text-center">
-        <h1 class="p-3">Weather Forecast Dashboard</h1>
+        <h1 class="p-3 bg-primary bg-gradient text-white">Weather Forecast Dashboard</h1>
     </header>
 
     <div class="container text-center">
@@ -32,11 +32,7 @@
             <div id="history-list" class="list-group">
                 <!-- a tags below will be dynamically added in js using a for loop tied to the users search input -->
                 <!-- when the user selects an a tag, function will run to fetch the API with a search query that matches user selection -->
-                <!-- <button class="list-group-item m-2 btn btn-secondary">Searched City</button>
-                <button class="list-group-item m-2 btn btn-secondary">Searched City</button> -->
-                <!-- <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-                <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-                <a href="#" class="list-group-item list-group-item-action">A fourth link item</a> -->
+                <!-- <button class="list-group-item m-2 btn btn-secondary">Searched City</button> -->
             </div>
           </div>
           <div class="col-sm-9">
@@ -44,7 +40,7 @@
             <div id="current-day" class="row mt-2">
               <div class="col-12">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body border border-dark border-3">
                       <div class="d-flex flex-row">
                         <h4 id="city-name-current" class="p-2"></h4>
                         <h4 id="current-date" class="p-2"></h4>
@@ -64,9 +60,9 @@
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col">
                         <div class="card">
-                          <div class="card-body">
+                          <div class="card-body bg-info bg-gradient text-white text-start">
                             <h5 id="forecast-date" class="card-title text-start"></h5>
-                            <img id="forecast-icon-1" class="float-start"></img>
+                            <img id="forecast-icon-1"></img>
                             <p id="forecast-temp-1" class="card-text text-start"></p>
                             <p id="forecast-wind-1" class="card-text text-start"></p>
                             <p id="forecast-humidity-1" class="card-text text-start"></p>
@@ -75,9 +71,9 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                          <div class="card-body">
+                          <div class="card-body bg-info bg-gradient text-white text-start">
                             <h5 id="forecast-date" class="card-title text-start"></h5>
-                            <img id="forecast-icon-2" class="float-start"></img>
+                            <img id="forecast-icon-2"></img>
                             <p id="forecast-temp-2" class="card-text text-start"></p>
                             <p id="forecast-wind-2" class="card-text text-start"></p>
                             <p id="forecast-humidity-2" class="card-text text-start"></p>
@@ -86,9 +82,9 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                          <div class="card-body">
+                          <div class="card-body bg-info bg-gradient text-white text-start">
                             <h5 id="forecast-date" class="card-title text-start"></h5>
-                            <img id="forecast-icon-3" class="float-start"></img>
+                            <img id="forecast-icon-3"></img>
                             <p id="forecast-temp-3" class="card-text text-start"></p>
                             <p id="forecast-wind-3" class="card-text text-start"></p>
                             <p id="forecast-humidity-3" class="card-text text-start"></p>
@@ -97,9 +93,9 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                          <div class="card-body">
+                          <div class="card-body bg-info bg-gradient text-white text-start">
                             <h5 id="forecast-date" class="card-title text-start"></h5>
-                            <img id="forecast-icon-4" class="float-start"></img>
+                            <img id="forecast-icon-4"></img>
                             <p id="forecast-temp-4" class="card-text text-start"></p>
                             <p id="forecast-wind-4" class="card-text text-start"></p>
                             <p id="forecast-humidity-4" class="card-text text-start"></p>
@@ -108,9 +104,9 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                          <div class="card-body">
+                          <div class="card-body bg-info bg-gradient text-white text-start">
                             <h5 id="forecast-date" class="card-title text-start"></h5>
-                            <img id="forecast-icon-5" class="float-start"></img>
+                            <img id="forecast-icon-5"></img>
                             <p id="forecast-temp-5" class="card-text text-start"></p>
                             <p id="forecast-wind-5" class="card-text text-start"></p>
                             <p id="forecast-humidity-5" class="card-text text-start"></p>
